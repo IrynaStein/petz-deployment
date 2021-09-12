@@ -1,11 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchCemetery = createAsyncThunk("cemetery/fetchCemetery", async() => {
-    const response = await fetch('http://localhost:3000/cemetery', {
-        method: "GET",
-        credentials: "include"
-    }
-    )
+    const response = await fetch('http://localhost:3000/cemetery')
     const data = await response.json()
     return data
 })

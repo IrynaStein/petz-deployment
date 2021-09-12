@@ -1,18 +1,14 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchPets = createAsyncThunk("pets/fetchPets", async () => {
-  const response = await fetch("http://localhost:3000/pets", {
-    method: "GET",
-    credentials: "include"
-  });
+  const response = await fetch("http://localhost:3000/pets");
   const data = await response.json();
   return data;
 });
 
 export const deletePet = createAsyncThunk("/pets/deletePet", async (id) => {
   const response = await fetch(`http://localhost:3000/pets/${id}`, { 
-    method: "DELETE",
-    credentials: "include" 
+    method: "DELETE"
   });
   const data = await response.json();
   return data;
@@ -22,7 +18,6 @@ export const createPet = createAsyncThunk("pets/createPet", async (pet) => {
   const response = await fetch("http://localhost:3000/pets", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Accept": "application/json" },
-    credentials: "include",
     body: JSON.stringify(pet),
   });
   const data = await response.json();
@@ -33,7 +28,6 @@ export const updatePet = createAsyncThunk("pets/updatePet", async (pet) => {
   const response = await fetch(`http://localhost:3000/pets/${pet.id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
-    credentials: "include",
     body: JSON.stringify({
       sleepy: pet.sleepy,
       alive: pet.alive,

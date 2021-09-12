@@ -25,8 +25,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
-      },
-      // credentials: "include",
+      }
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
