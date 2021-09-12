@@ -17,7 +17,7 @@ export const deletePet = createAsyncThunk("/pets/deletePet", async (id) => {
 export const createPet = createAsyncThunk("pets/createPet", async (pet) => {
   const response = await fetch("https://agile-scrubland-06723.herokuapp.com/pets", {
     method: "POST",
-    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+    headers: { "Content-Type": "application/json"},
     body: JSON.stringify(pet),
   });
   const data = await response.json();
