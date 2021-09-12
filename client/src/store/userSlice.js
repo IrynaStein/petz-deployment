@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const createUser = createAsyncThunk("user/createUser", async (formData) => {
-  const response = await fetch("http://localhost:3000/signup", {
+  const response = await fetch("https://agile-scrubland-06723.herokuapp.com/signup", {
     method: "POST",
     body: formData
   });
@@ -12,7 +12,7 @@ export const createUser = createAsyncThunk("user/createUser", async (formData) =
 
 
 export const deleteUser = createAsyncThunk("/user/deleteUser", async (id) => {
-  const response = await fetch(`http://localhost:3000/users/${id}`, { 
+  const response = await fetch(`https://agile-scrubland-06723.herokuapp.com/users/${id}`, { 
       method: "DELETE"
  });
   const data = await response.json();
@@ -20,7 +20,7 @@ export const deleteUser = createAsyncThunk("/user/deleteUser", async (id) => {
 });
 
 export const onLogin = createAsyncThunk("user/onLogin", async (user) => {
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("https://agile-scrubland-06723.herokuapp.com/login", {
         method: "POST", 
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(user)
@@ -30,7 +30,7 @@ export const onLogin = createAsyncThunk("user/onLogin", async (user) => {
 })
 
 export const onLogout = createAsyncThunk("user/onLogout", async() => {
-    const response = await fetch("http://localhost:3000/logout", {
+    const response = await fetch("https://agile-scrubland-06723.herokuapp.com/logout", {
         method: "DELETE"
     })
     const data = await response.json()
@@ -41,7 +41,7 @@ export const onLogout = createAsyncThunk("user/onLogout", async() => {
 export const updateUser = createAsyncThunk(
   "/user/updateUser",
   async (updatedUser, id) => {
-    const response = await fetch(`http://localhost:3000/users/${id}`, {
+    const response = await fetch(`https://agile-scrubland-06723.herokuapp.com/users/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updatedUser, id),

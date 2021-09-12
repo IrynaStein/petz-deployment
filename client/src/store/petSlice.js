@@ -1,13 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchPets = createAsyncThunk("pets/fetchPets", async () => {
-  const response = await fetch("http://localhost:3000/pets");
+  const response = await fetch("https://agile-scrubland-06723.herokuapp.com/pets");
   const data = await response.json();
   return data;
 });
 
 export const deletePet = createAsyncThunk("/pets/deletePet", async (id) => {
-  const response = await fetch(`http://localhost:3000/pets/${id}`, { 
+  const response = await fetch(`https://agile-scrubland-06723.herokuapp.com/pets/${id}`, { 
     method: "DELETE"
   });
   const data = await response.json();
@@ -15,7 +15,7 @@ export const deletePet = createAsyncThunk("/pets/deletePet", async (id) => {
 });
 
 export const createPet = createAsyncThunk("pets/createPet", async (pet) => {
-  const response = await fetch("http://localhost:3000/pets", {
+  const response = await fetch("https://agile-scrubland-06723.herokuapp.com/pets", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Accept": "application/json" },
     body: JSON.stringify(pet),
@@ -25,7 +25,7 @@ export const createPet = createAsyncThunk("pets/createPet", async (pet) => {
 });
 
 export const updatePet = createAsyncThunk("pets/updatePet", async (pet) => {
-  const response = await fetch(`http://localhost:3000/pets/${pet.id}`, {
+  const response = await fetch(`https://agile-scrubland-06723.herokuapp.com/pets/${pet.id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
