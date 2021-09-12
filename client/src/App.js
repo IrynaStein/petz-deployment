@@ -40,7 +40,7 @@ function App() {
       ) : (
         <Switch>
           <Route exact path="/">
-            {user ? <HomePage /> : <Redirect to="/login" />}
+            {user ? <HomePage /> : <Redirect to="/" />}
           </Route>
           <Route exact path="/signup">
             <SignupForm />
