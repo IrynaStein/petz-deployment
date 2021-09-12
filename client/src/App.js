@@ -20,13 +20,13 @@ function App() {
 
   useEffect(() => {
     // auto-login
-    fetch("/me", {
+    fetch("http://localhost:3000/me", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      credentials: "include",
+      // credentials: "include",
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {

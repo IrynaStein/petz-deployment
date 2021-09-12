@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const createUser = createAsyncThunk("user/createUser", async (formData) => {
-  const response = await fetch("/signup", {
+  const response = await fetch("http://localhost:3000/signup", {
     method: "POST",
     credentials: "include",
     body: formData
@@ -13,7 +13,7 @@ export const createUser = createAsyncThunk("user/createUser", async (formData) =
 
 
 export const deleteUser = createAsyncThunk("/user/deleteUser", async (id) => {
-  const response = await fetch(`/users/${id}`, { 
+  const response = await fetch(`http://localhost:3000/users/${id}`, { 
       method: "DELETE",
       credentials: "include"
  });
@@ -22,7 +22,7 @@ export const deleteUser = createAsyncThunk("/user/deleteUser", async (id) => {
 });
 
 export const onLogin = createAsyncThunk("user/onLogin", async (user) => {
-    const response = await fetch("/login", {
+    const response = await fetch("http://localhost:3000/login", {
         method: "POST", 
         headers: {"Content-Type": "application/json"},
         credentials: "include",
@@ -33,7 +33,7 @@ export const onLogin = createAsyncThunk("user/onLogin", async (user) => {
 })
 
 export const onLogout = createAsyncThunk("user/onLogout", async() => {
-    const response = await fetch("/logout", {
+    const response = await fetch("http://localhost:3000/logout", {
         method: "DELETE",
         credentials: "include"
     })
@@ -45,7 +45,7 @@ export const onLogout = createAsyncThunk("user/onLogout", async() => {
 export const updateUser = createAsyncThunk(
   "/user/updateUser",
   async (updatedUser, id) => {
-    const response = await fetch(`/users/${id}`, {
+    const response = await fetch(`http://localhost:3000/users/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       credentials: "include",
