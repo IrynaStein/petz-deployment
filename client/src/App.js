@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     // auto-login
-    fetch("http://localhost:3000/me").then((r) => {
+    fetch("https://agile-scrubland-06723.herokuapp.com/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => {
           dispatch(userActions.userLogin(user));
