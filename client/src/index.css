@@ -1,0 +1,225 @@
+body {
+  display: block;
+  background-image: url("https://i.imgur.com/27vvVmw.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 500px;
+  border: 2px solid #b78e44;
+  font: 15px Indie Flower;
+  font-weight: bold;
+}
+
+.centered-form-signup {
+  position: relative;
+  top: 165px;
+}
+
+.centered-form-login {
+  position: relative;
+  top: 210px;
+}
+
+.input-field-orange {
+  border-radius: 20px;
+  color: #b78e44;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+  box-shadow: 1px 2px 3px 3px #dcb56d;
+  font: 15px Indie Flower;
+  font-weight: bold;
+}
+
+.input-field-orange:focus,
+textarea {
+  outline: none !important;
+}
+
+.input-field-orange:focus {
+  color: #b78e44;
+}
+
+.input-field-gray {
+  border-radius: 20px;
+  color: #93b3d2;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+  box-shadow: 1px 2px 3px 3px #86a1b3;
+  font: 15px Indie Flower;
+  font-weight: bold;
+}
+
+.input-field-gray:focus,
+textarea {
+  outline: none !important;
+}
+
+.input-field-gray:focus {
+  color: #93b3d2;
+}
+
+.button-regular {
+  border: none;
+  background: none;
+  font: 20px Indie Flower;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+button-regular:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.button-regular-inv {
+  border: none;
+  background: none;
+  font: 20px Indie Flower;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+button-regular-inv:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.inline {
+  display: inline;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: white;
+}
+
+section {
+  float: left;
+  width: 115px;
+}
+
+.button-green {
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font: 12px Indie Flower;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  color: black;
+  box-shadow: 1px 2px 3px 3px #50ab6e;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 2px;
+  text-decoration: none;
+}
+.button-green:hover {
+  color: #50ab6e;
+  cursor: pointer;
+}
+.button-green:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: auto;
+}
+
+.button-gray {
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font: 12px Indie Flower;
+  margin-left: 5px;
+  margin-right: 5px;
+  position: relative;
+  color: black;
+  box-shadow: 1px 2px 3px 3px #93b3d2;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 2px;
+  text-decoration: none;
+}
+.button-gray:hover {
+  color: #93b3d2;
+  cursor: pointer;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dcb56d;
+  color: #7e7e7e;
+  width: 60px;
+  height: 60px;
+  background: white;
+  padding: 5px;
+  border-radius: 100px;
+  font: 15px Indie Flower;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.pop-up-message {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  overflow: scroll;
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  bottom: 200px;
+  box-shadow: 1px 2px 3px 3px #ff8787;
+  text-decoration: none;
+}
+
+.game-rules {
+  display: flex;
+  background: rgba(255, 255, 255, 0.6);
+  justify-content: center;
+  position: relative;
+  top: 30px;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 15px;
+  border-radius: 20px;
+}
+
+.loader{
+  left: 200px;
+  position: relative;
+  top: 200px;
+  height: 100px;
+  width: 100px;
+}

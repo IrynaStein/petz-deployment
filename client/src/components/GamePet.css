@@ -1,0 +1,58 @@
+.pet-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  top: 110px;
+  width: 300px;
+  height: 300px;
+  padding: 5px;
+  border-radius: 300px;
+  cursor: pointer;
+}
+.ghost-display{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: -70px;
+  bottom: 200px;
+  width: 200px;
+  padding: 5px;
+}
+.ghost-display > img {
+  width: 100%;
+}
+
+.pet-display > img {
+  width: 100%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  background-image: url("https://live.staticflickr.com/65535/51423857442_fb0a6a3cb0_o.png");
+  background-size: 100% 100%;
+  position: relative;
+  right: 130px;
+  width: 250px;
+  height: 200px;
+  /* border: solid 1px; */
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+}
+
+.notification-container{
+  display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    bottom: 20px;
+    right: 8px;
+    font-size: 12px;
+    flex-direction: column;
+    justify-content: center;
+}

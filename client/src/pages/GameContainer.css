@@ -1,0 +1,49 @@
+.game-container {
+  background-image: url("https://live.staticflickr.com/65535/51407109978_5a63923b81_o.jpg");
+  background-size: 500px;
+  height: 494px;
+  border: 3px solid #50ab6e;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.health_container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: center;
+    height: 20px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    flex-wrap: nowrap;
+}
+
+.health-container > img {
+  width: 100%;
+  margin: 5px;
+}
+
+.wellness-bar {
+    display: flex;
+    margin-top: 10px;
+    position: relative;
+    top: 120px;
+    width: 500px;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.pop-up {
+  display: flex;
+  background: rgba(255, 255, 255, 0.7);
+  overflow: scroll;
+  border-radius: 10px;
+  padding: 5px;
+  position: relative;
+  box-shadow: 1px 2px 3px 3px #50ab6e;
+  text-decoration: none;
+}
