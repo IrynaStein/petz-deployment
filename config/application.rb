@@ -22,8 +22,6 @@ Bundler.require(*Rails.groups)
 module PetsBackend
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -37,17 +35,9 @@ module PetsBackend
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
     config.action_dispatch.cookies_same_site_protection = :strict
+    config.load_defaults 6.1
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    # config.middleware.insert_before 0, Rack::Cors do
-    #   allow do
-    #     origins 'http://localhost:4000'
-    #     resource '*',
-    #              headers: :any,
-    #              methods: %i[get post put patch delete options head],
-    #              credentials: true
-    #   end
-    # end
   end
 end
