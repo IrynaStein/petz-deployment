@@ -31,11 +31,9 @@ export default function CreatePet() {
   const errors = useSelector((state) => state.pets.errors);
   const handleClick = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-    console.log(e.target.value);
   };
 
   const handleSubmit = (e) => {
-    console.log(formData);
     e.preventDefault();
     dispatch(createPet(formData)).then(() => history.push("/"));
   };

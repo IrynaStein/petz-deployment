@@ -10,7 +10,6 @@ function LoginForm() {
 
   function onSubmit(data, e) {
     e.preventDefault();
-    console.log(data);
     dispatch(onLogin(data));
     reset()
   }

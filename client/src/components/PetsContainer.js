@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 
 export default function PetsContainer() {
   const pets = useSelector((state) => state.pets.petList);
-  console.log(pets);
 
   const renderPets = () =>
     pets.map((pet) => {

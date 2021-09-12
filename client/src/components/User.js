@@ -30,7 +30,6 @@ export default function User() {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    console.log(data);
     dispatch(updateUser(data, id));
     if (errorsBe.length === 0) {
       setShowForm(false);

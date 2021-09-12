@@ -10,7 +10,6 @@ function SignupForm() {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data, e) => {
-    console.log(data.image[0])
     e.preventDefault();
     const formData = new FormData();
     if (data.image[0]) {

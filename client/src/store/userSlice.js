@@ -34,7 +34,6 @@ export const onLogout = createAsyncThunk("user/onLogout", async() => {
         method: "DELETE"
     })
     const data = await response.json()
-    console.log(data)
     return data
 })
 
